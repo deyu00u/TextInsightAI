@@ -82,7 +82,7 @@ if record:
     st.caption('Sentence and paragraph counts are estimates based on punctuation and blank lines.')
     st.subheader('3 · Most frequent words')
     st.caption('Top 10 words; common English words ' + ('excluded.' if exclude else 'included.'))
-        df = pd.DataFrame(stats['frequent_words'], columns=['Word', 'Frequency'])
+    df = pd.DataFrame(stats['frequent_words'], columns=['Word', 'Frequency'])
     if not df.empty:
         left, right = st.columns([1, 2])
         left.dataframe(df, hide_index=True, width='stretch')
